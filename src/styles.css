@@ -16,7 +16,7 @@
     --color-logo: #ff7782;
     --color-bold: #eb676f;
     --color-light: #95dbd3;
-    --color-dark: #1b3630;
+    --color-dark: #2c584e;
     
     /* Icon Colors */
     --color-fire: #e76d39;
@@ -79,12 +79,12 @@ h2{
 
 /* Style for header 3 */
 h3{
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* Style for header 4 */
 h4{
-    font-size: 0.87rem;
+    font-size: 0.9rem;
 }
 
 /* Style for header 5 */
@@ -158,9 +158,11 @@ aside .top{
     margin-top: 1.4rem;
 }
 
+/*
 aside .close{
     display: none;
 }
+*/
 
 /* ----------------SIDEBAR DISPLAY---------------- */
 aside .sidebar{
@@ -235,7 +237,7 @@ aside .sidebar a:hover span{
     transition: all 350ms ease;
 }
 
-/* ----------------MAIN DASHBOARD---------------- */
+/* ----------------MAIN SECTION---------------- */
 main{
     margin-top: 1.4rem;
 }
@@ -260,6 +262,7 @@ main .calories{
     margin-top: 0.5rem;
 }
 
+/*----------------*/
 /* Style for User Calorie Progress Card */
 main .calories > div{
     background: var(--color-box);
@@ -312,5 +315,13 @@ main .left > div.intake{
 main .left > div.goal{
     display: flex;
     gap: 0.5rem;
+}
+
+main .left h3{
+    color: var(--color-dark);
+}
+
+main .left h4{
+    color: var(--color-bold);
 }
 
