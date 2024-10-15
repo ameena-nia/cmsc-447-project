@@ -270,6 +270,8 @@ main .calories > div{
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
+    height: 250px;
+    width: 450px;
 }
 
 /* Shadow disappears when user hovers over box*/
@@ -336,6 +338,22 @@ main .left h4{
 main .middle{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+
+/* Adjusting the size of the svg */
+main .middle .ring svg{
+    height: 7rem;
+    width: 10rem;
+}
+
+main .middle .ring svg circle{
+    fill: none;
+    stroke: var(--color-bold);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 200;
+    stroke-dashoffset: -30;
+
 }
 
