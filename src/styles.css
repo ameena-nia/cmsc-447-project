@@ -262,7 +262,7 @@ main .calories{
     margin-top: 0.5rem;
 }
 
-/*----------------*/
+/*---------------- CALORIE PROGRESS CARD ----------------*/
 /* Style for User Calorie Progress Card */
 main .calories > div{
     background: var(--color-box);
@@ -278,30 +278,34 @@ main .calories > div:hover{
     transition: all 300ms ease;
 }
 
+/* Style for Calories Burned Fire Icon*/
 main .left > div.burned span{
     background: var(--color-fire);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 2rem;
-    margin-top: 1.5rem;
+    /*margin-top: 1.5rem;*/
 }
 
+/* Style for Calories Consumed Utensils Icon*/
 main .left > div.intake span{
     background: var(--color-food);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 2rem;
-    margin-top: 1.5rem;
+    /*margin-top: 1.5rem;*/
 }
 
+/* Style for Calorie Goal Target Icon*/
 main .left > div.goal span{
     background: var(--color-goal);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 2rem;
-    margin-top: 1.5rem;
+    /*margin-top: 1.5rem;*/
 }
 
+/* Fixing the alignment of icons and text */
 main .left > div.burned{
     display: flex;
     gap: 0.5rem;
@@ -317,11 +321,21 @@ main .left > div.goal{
     gap: 0.5rem;
 }
 
+/* Adjusting the header distances from the margin */
 main .left h3{
     color: var(--color-dark);
+    margin-top: 0.7rem;
 }
 
 main .left h4{
     color: var(--color-bold);
+    margin-top: 0.8rem;
+}
+
+/* -----------------CALORIES REMAINING RING-----------------*/
+main .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
