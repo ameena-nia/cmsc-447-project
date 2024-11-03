@@ -1,0 +1,127 @@
+<p>main works!</p>
+<!-- Creating new container -->
+<div class="container">
+  <!-- ----------------CREATING SIDEBAR---------------- -->
+  <aside>
+    <!-- Create the MotionMind Logo -->
+    <div class="top">
+      <div class="logo">
+        <!-- Logo is located in the sidebar.
+         'Danger' is a CSS class that will contain
+         the color we want for the word 'Motion'-->
+        <h2><span class="dark">Motion</span><span class="bold">Mind</span></h2>
+      </div>
+      <!-- Create another division for the close button -->
+      <div class="close" id="close-btn">
+        <span class="material-symbols-outlined">close</span>
+      </div>
+    </div>
+
+    <!-- Creating the sidebar items -->
+    <div class="sidebar">
+      <!-- Dashboard -->
+      <a href="#">
+        <span class="material-symbols-outlined">grid_view</span>
+        <h3>Dashboard</h3>
+      </a>
+
+      <!-- Profile -->
+      <a href="#">
+        <span class="material-symbols-outlined">person</span>
+        <h3>Profile</h3>
+      </a>
+
+      <!-- Progress -->
+      <a href="#">
+        <span class="material-symbols-outlined">timeline</span>
+        <h3>Progress</h3>
+      </a>
+
+      <!-- Goals -->
+      <a href="#">
+        <span class="material-symbols-outlined">target</span>
+        <h3>Goals</h3>
+      </a>
+
+      <!-- Reviews -->
+      <a href="#">
+        <span class="material-symbols-outlined">edit_note</span>
+        <h3>Reviews</h3>
+      </a>
+
+      <!-- Photos -->
+      <a href="#">
+        <span class="material-symbols-outlined">photo_camera</span>
+        <h3>Photos</h3>
+      </a>
+
+      <!-- Logout -->
+      <a href="#">
+        <span class="material-symbols-outlined">logout</span>
+        <h3>Logout</h3>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ----------------CREATING MAIN---------------- -->
+  <main>
+    <h1><span class="dark">Dashboard</span></h1>
+    <!-- Display the current date -->
+    <div class="date">
+      <input type="date">
+    </div>
+
+    <!-- Display Current Day's Progress -->
+    <div class="calories">
+      <h2><span class="dark">Today's Progress</span></h2>
+      <!-- Middle section of the progress card.
+       This section contains the following calorie info:
+       1. Calories burned
+       2. Calories consumed
+       3. Target goal 
+       4. Progress ring
+       -->
+      <div class="middle">
+        <br>
+        <!-- The left side of the middle section
+         contains the text and numerical data of
+         the user's calorie goals and progress.-->
+        <div class="left">
+          <!-- CALORIES BURNED -->         
+          <div class="burned">
+            <span class="material-symbols-outlined">local_fire_department</span>
+            <h3>Burned: </h3>
+            <h4>207</h4>
+          </div>
+          <br>
+          <!-- CALORIES CONSUMED -->
+          <div class="intake">
+            <span class="material-symbols-outlined">restaurant</span>
+            <h3>Intake: </h3>
+            <h4>950</h4>
+          </div>
+          <br>
+          <!-- USER TARGET GOAL -->
+          <div class="goal">
+            <span class="material-symbols-outlined">target</span>
+            <h3>Target Goal: </h3>
+            <h4>1200</h4>
+          </div>
+        </div>
+
+        <!-- PROGRESS RING -->
+        <div class="ring">
+          <svg>
+            <!-- Ring Dimensions -->
+            <circle cx='38' cy='38' r='36'></circle>
+          </svg> 
+          <!-- Remaining calories until target goal is met -->              
+          <div class="remaining">
+              <h3>457</h3>
+              <p>Remaining</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
