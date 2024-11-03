@@ -14,7 +14,7 @@ export class LoginComponent {
     const username = (document.getElementById('username') as HTMLInputElement).value;
     const password = (document.getElementById('password') as HTMLInputElement).value;
 
-    if (username === 'testuser' && password === 'password123') {
+    if (username === 'testuser' && password === 'password') {
       alert('Login successful!');
       this.router.navigate(['/main']); // Navigate to the main page
     } else {
