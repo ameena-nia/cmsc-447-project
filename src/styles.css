@@ -166,7 +166,7 @@ aside .close{
 
 /* ----------------SIDEBAR DISPLAY---------------- */
 aside .sidebar{
-    background: var(--color-side);
+    /*background: var(--color-side);*/
     display: flex;
     flex-direction: column;
     height: 86vh;
@@ -270,8 +270,8 @@ main .calories > div{
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
-    height: 250px;
-    width: 450px;
+    height: 400px;
+    width: 700px;
 }
 
 /* Shadow disappears when user hovers over box*/
@@ -357,3 +357,75 @@ main .middle .ring svg circle{
 
 }
 
+/* -----------------EXERCISE AND NUTRITION LOG CARDS-----------------*/
+/* Create two columns for the exercise and food logs*/
+main .daily-logs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Box style for exercise and food log boxes*/
+main .daily-logs > div{
+    background: var(--color-box);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    height: 200px;
+    width: 330px;
+    gap: 1.5rem;
+}
+
+/* Shadow disappears when user hovers over box*/
+main .daily-logs > div:hover{
+    box-shadow: none;
+    transition: all 300ms ease;
+}
+
+/* ------------------- EXERCISE CARD ICONS -------------------*/
+/* Style for Exercise Burned Fire Icon*/
+main .exercise > div.burned span{
+    background: var(--color-fire);
+    padding: 0.1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    /*margin-top: 1.5rem;*/
+}
+
+/* Style for Exercise Burn-Time Icon*/
+main .exercise > div.burn-time span{
+    background: var(--color-goal);
+    padding: 0.1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    /*margin-top: 1.5rem;*/
+}
+
+/* Fixing the alignment of icons and text */
+main .exercise > div.burned{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+main .exercise > div.burn-time{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+/* ------------------- NUTRITION CARD ICONS -------------------*/
+main .nutrition > div.food span{
+    background: var(--color-food);
+    padding: 0.1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    /*margin-top: 1.5rem;*/
+}
+
+/* Fixing the alignment of icons and text */
+main .nutrition > div.food{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
