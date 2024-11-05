@@ -83,15 +83,19 @@
     <!-- ----------------CREATING MAIN---------------- -->
     <main>
       <h1><span class="dark">Dashboard</span></h1>
-      <!-- Display the current date -->
+      <br>
+      <h2><span class="dark">Today's Progress</span></h2>
+      <!-- Display the current date 
       <div class="date">
         <input type="date">
       </div>
-      
+      -->
 
       <!-- Display Current Day's Progress -->
       <div class="calories">
-        <h2><span class="dark">Today's Progress</span></h2>
+        <h2>Calories</h2>
+        <br>
+
         <!-- Middle section of the progress card.
          This section contains the following calorie info:
          1. Calories burned
@@ -99,51 +103,40 @@
          3. Target goal 
          4. Progress ring
          -->
-        <div class="middle">
-          <!--<h2>Calories</h2>-->
-          <br>
-          <!-- The left side of the middle section
-           contain the text and numerical data of
-           the user's calorie goals and progress.-->
-          <div class="left">
 
-            <!-- CALORIES BURNED -->         
-            <div class="burned">
-              <span class="material-symbols-outlined">local_fire_department</span>
-              <h3>Burned: </h3>
-              <h4>207</h4>
-            </div>
-            <br>
-            <!-- CALORIES CONSUMED -->
+        <!-- CALORIES BURNED -->         
+        <div class="cal-burned">
+          <span class="material-symbols-outlined">local_fire_department</span>
+          <h3>Burned: </h3>
+        </div>
+        <br>
+        <!-- CALORIES CONSUMED -->
 
-            <div class="intake">
-              <span class="material-symbols-outlined">restaurant</span>
-              <h3>Intake: </h3>
-              <h4>950</h4>
-            </div>
-            <br>
-            <!-- USER TARGET GOAL -->
-            <div class="goal">
-              <span class="material-symbols-outlined">target</span>
-              <h3>Target Goal: </h3>
-              <h4>1200</h4>
-            </div>
-          </div>
+        <div class="cal-intake">
+          <span class="material-symbols-outlined">restaurant</span>
+          <h3>Intake: </h3>
+        </div>
+        <br>
 
-          <!-- PROGRESS RING -->
-          <div class="ring">
-            <svg>
-              <!-- Ring Dimensions -->
-              <circle cx='38' cy='38' r='36'></circle>
-            </svg> 
-            <!-- Remaining calories until target goal is met -->              
-            <div class="remaining">
-                <h3>457</h3>
-                <p>Remaining</p>
-            </div>
+        <!-- USER TARGET GOAL -->
+        <div class="cal-goal">
+          <span class="material-symbols-outlined">target</span>
+          <h3>Target Goal: </h3>
+        </div>
+          
+
+        <!-- PROGRESS RING 
+        <div class="ring">
+          <svg>
+            <circle cx='38' cy='38' r='36'></circle>
+          </svg>             
+          <div class="remaining">
+              <h3>457</h3>
+              <p>Remaining</p>
           </div>
         </div>
-       </div>
+        -->
+      </div>
 
       <!-- Display Current Exercise and Nutrition Log -->
       <div class = "daily-logs">
@@ -191,7 +184,7 @@
         </div>
       </div>
       <!-- --------------------------END OF TOP-------------------------- -->
-
+      <br>
       <!-- User Reviews Section -->
       <div class="user-reviews">
         <br>

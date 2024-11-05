@@ -272,7 +272,7 @@ main .calories h2{
 
 /*---------------- CALORIE PROGRESS CARD ----------------*/
 /* Style for User Calorie Progress Card */
-main .calories > div{
+main .calories{
     background: var(--color-box);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -283,39 +283,70 @@ main .calories > div{
 }
 
 /* Shadow disappears when user hovers over box*/
-main .calories > div:hover{
+main .calories:hover{
     box-shadow: none;
     transition: all 300ms ease;
 }
 
-/* Style for Calories Burned Fire Icon*/
-main .left > div.burned span{
+main .calories .cal-burned span{
     background: var(--color-fire);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 2rem;
-    /*margin-top: 1.5rem;*/
 }
 
-/* Style for Calories Consumed Utensils Icon*/
-main .left > div.intake span{
+main .cal-burned{
+    display: flex;
+    gap: 0.5rem;
+}
+
+main .calories .cal-intake span{
     background: var(--color-food);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 2rem;
-    /*margin-top: 1.5rem;*/
 }
 
-/* Style for Calorie Goal Target Icon*/
-main .left > div.goal span{
+main .cal-intake{
+    display: flex;
+    gap: 0.5rem;
+}
+
+main .calories .cal-goal span{
     background: var(--color-goal);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 2rem;
-    /*margin-top: 1.5rem;*/
 }
 
-/* Fixing the alignment of icons and text */
+main .cal-goal{
+    display: flex;
+    gap: 0.5rem;
+}
+
+main .calories h3{
+    margin-top: 0.8rem;
+}
+
+/* Style for Calories Burned Fire Icon
+main .left > div.burned span{
+
+}
+*/
+
+/* Style for Calories Consumed Utensils Icon
+main .left > div.intake span{
+
+}
+*/
+
+/* Style for Calorie Goal Target Icon
+main .left > div.goal span{
+
+}
+*/
+
+/* Fixing the alignment of icons and text 
 main .left > div.burned{
     display: flex;
     gap: 0.5rem;
@@ -330,8 +361,9 @@ main .left > div.goal{
     display: flex;
     gap: 0.5rem;
 }
+*/
 
-/* Adjusting the header distances from the margin */
+/* Adjusting the header distances from the margin 
 main .left h3{
     color: black;
     margin-top: 0.7rem;
@@ -341,19 +373,23 @@ main .left h4{
     color: var(--color-bold);
     margin-top: 0.8rem;
 }
+*/
 
-/* -----------------CALORIES REMAINING RING-----------------*/
+/* -----------------CALORIES REMAINING RING-----------------
 main .middle{
     display: flex;
     align-items: center;
 }
+*/
 
-/* Adjusting the size of the svg */
+/* Adjusting the size of the svg 
 main .middle .ring svg{
     height: 7rem;
     width: 10rem;
 }
+*/
 
+/*
 main .middle .ring svg circle{
     fill: none;
     stroke: var(--color-bold);
@@ -364,6 +400,7 @@ main .middle .ring svg circle{
     stroke-dashoffset: -30;
 
 }
+*/
 
 /* -----------------EXERCISE AND NUTRITION LOG CARDS-----------------*/
 /* Create two columns for the exercise and food logs*/
