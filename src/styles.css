@@ -386,7 +386,7 @@ main .daily-logs > div{
     gap: 1.5rem;
 }
 
-/* Shadow disappears when user hovers over box*/
+/* Shadow disappears when user hovers over daily log boxes*/
 main .daily-logs > div:hover{
     box-shadow: none;
     transition: all 300ms ease;
@@ -461,6 +461,9 @@ main .nutrition > div.food{
     text-align: right;
 }
 
+/* USER REVIEWS SECTION */
+
+/* Style for entire user review box */
 .right .user-reviews .review-info{
     background: var(--color-box);
     padding: var(--card-padding);
@@ -471,16 +474,97 @@ main .nutrition > div.food{
     width: 330px;
 }
 
-.right .user-reviews .review-info h3{
+/* Shadow disappears when user hovers over box */
+.right .user-reviews > div:hover{
+    box-shadow: none;
+    transition: all 300ms ease;
+}
+
+/* Style for content inside user review box*/
+.right .user-reviews .review-info p{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Style for "add review" button */
+.right .add-review{
+    background: var(--color-shadow);
+    padding: var(--card-padding);
+    border: 2px dashed var(--color-dark);
+    border-radius: var(--card-border-radius);
+    height: 75px;
+    width: 200px;
+    margin-top: 1.8rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right .add-review h3{
+    display: flex;
+    justify-content: center;
+    margin-top: -0.8rem;
+}
+
+/* Plus icon style */
+.right .add-review span{
     display: flex;
     justify-content: center;
 }
 
-.right .user-reviews .review-info .add-review{
-    background: var(--color-goal);
+/* USER GOALS SECTIONS */
+
+.right .user-goals{
+    margin-top: 2rem;
+}
+
+/* Style for entire user goal box */
+.right .user-goals .goal-info{
+    background: var(--color-box);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    height: 80px;
-    width: 200px;
     margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    height: 200px;
+    width: 330px;
+}
+
+/* Shadow disappears when user hovers over box */
+.right .user-goals > div:hover{
+    box-shadow: none;
+    transition: all 300ms ease;
+}
+
+/* Style for content inside user goal box*/
+.right .user-goals .goal-info p{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Style for "add goal" button */
+.right .add-goal{
+    background: var(--color-shadow);
+    padding: var(--card-padding);
+    border: 2px dashed var(--color-dark);
+    border-radius: var(--card-border-radius);
+    height: 75px;
+    width: 200px;
+    margin-top: 1.8rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right .add-goal h3{
+    display: flex;
+    justify-content: center;
+    margin-top: -0.8rem;
+}
+
+/* Plus icon style */
+.right .add-goal span{
+    display: flex;
+    justify-content: center;
 }
