@@ -282,12 +282,13 @@ main .calories{
     width: 700px;
 }
 
-/* Shadow disappears when user hovers over box*/
+/* Shadow disappears when user hovers over user calories box*/
 main .calories:hover{
     box-shadow: none;
     transition: all 300ms ease;
 }
 
+/* Style for calories burned icon */
 main .calories .cal-burned span{
     background: var(--color-fire);
     padding: 0.5rem;
@@ -295,11 +296,13 @@ main .calories .cal-burned span{
     font-size: 2rem;
 }
 
+/* Aligning the fire icon with text */
 main .cal-burned{
     display: flex;
     gap: 0.5rem;
 }
 
+/* Style for calories consumed icon */
 main .calories .cal-intake span{
     background: var(--color-food);
     padding: 0.5rem;
@@ -307,11 +310,13 @@ main .calories .cal-intake span{
     font-size: 2rem;
 }
 
+/* Aligning the restaurant icon with text */
 main .cal-intake{
     display: flex;
     gap: 0.5rem;
 }
 
+/* Style for calorie goals icon */
 main .calories .cal-goal span{
     background: var(--color-goal);
     padding: 0.5rem;
@@ -319,6 +324,7 @@ main .calories .cal-goal span{
     font-size: 2rem;
 }
 
+/* Aligning the target icon with text */
 main .cal-goal{
     display: flex;
     gap: 0.5rem;
@@ -498,7 +504,63 @@ main .nutrition > div.food{
     text-align: right;
 }
 
-/* USER REVIEWS SECTION */
+/* -------------------USER GOALS SECTION------------------- */
+
+/* Style for entire user goals box */
+.right .user-goals .goal-info{
+    background: var(--color-box);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    height: 200px;
+    width: 330px;
+}
+
+/* Shadow disappears when user hovers over user goals box */
+.right .user-goals > div:hover{
+    box-shadow: none;
+    transition: all 300ms ease;
+}
+
+/* Style for content inside user goals box*/
+.right .user-goals .goal-info p{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Style for "add goal" button */
+.right .add-goal{
+    background: var(--color-shadow);
+    padding: var(--card-padding);
+    border: 2px dashed var(--color-dark);
+    border-radius: var(--card-border-radius);
+    height: 75px;
+    width: 200px;
+    margin-top: 1.8rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right .add-goal h3{
+    display: flex;
+    justify-content: center;
+    margin-top: -0.8rem;
+}
+
+/* Plus icon style */
+.right .add-goal span{
+    display: flex;
+    justify-content: center;
+}
+
+/* -------------------USER REVIEW SECTIONS-------------------- */
+
+.right .user-reviews{
+    margin-top: 2rem;
+}
 
 /* Style for entire user review box */
 .right .user-reviews .review-info{
@@ -511,7 +573,7 @@ main .nutrition > div.food{
     width: 330px;
 }
 
-/* Shadow disappears when user hovers over box */
+/* Shadow disappears when user hovers over user reviews box */
 .right .user-reviews > div:hover{
     box-shadow: none;
     transition: all 300ms ease;
@@ -546,62 +608,6 @@ main .nutrition > div.food{
 
 /* Plus icon style */
 .right .add-review span{
-    display: flex;
-    justify-content: center;
-}
-
-/* -------------------USER GOALS SECTIONS-------------------- */
-
-.right .user-goals{
-    margin-top: 2rem;
-}
-
-/* Style for entire user goal box */
-.right .user-goals .goal-info{
-    background: var(--color-box);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    height: 200px;
-    width: 330px;
-}
-
-/* Shadow disappears when user hovers over box */
-.right .user-goals > div:hover{
-    box-shadow: none;
-    transition: all 300ms ease;
-}
-
-/* Style for content inside user goal box*/
-.right .user-goals .goal-info p{
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-}
-
-/* Style for "add goal" button */
-.right .add-goal{
-    background: var(--color-shadow);
-    padding: var(--card-padding);
-    border: 2px dashed var(--color-dark);
-    border-radius: var(--card-border-radius);
-    height: 75px;
-    width: 200px;
-    margin-top: 1.8rem;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.right .add-goal h3{
-    display: flex;
-    justify-content: center;
-    margin-top: -0.8rem;
-}
-
-/* Plus icon style */
-.right .add-goal span{
     display: flex;
     justify-content: center;
 }
