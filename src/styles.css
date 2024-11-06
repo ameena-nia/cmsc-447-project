@@ -162,15 +162,15 @@ aside .top{
     margin-top: 1.4rem;
 }
 
-/*
+
 aside .close{
     display: none;
 }
-*/
+
 
 /* ----------------SIDEBAR DISPLAY---------------- */
 aside .sidebar{
-    background: var(--color-side);
+    /*background: var(--color-side);*/
     display: flex;
     flex-direction: column;
     height: 86vh;
@@ -278,7 +278,7 @@ main .calories{
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
-    height: 400px;
+    height: 350px;
     width: 700px;
 }
 
@@ -550,7 +550,7 @@ main .nutrition > div.food{
     justify-content: center;
 }
 
-/* USER GOALS SECTIONS */
+/* -------------------USER GOALS SECTIONS-------------------- */
 
 .right .user-goals{
     margin-top: 2rem;
