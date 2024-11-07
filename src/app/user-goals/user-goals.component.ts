@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+//import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-goals',
@@ -8,6 +8,4 @@ import { Router } from '@angular/router';
   templateUrl: './user-goals.component.html',
   styleUrl: './user-goals.component.css'
 })
-export class UserGoalsComponent {
-
-}
+export class UserGoalsComponent {}
