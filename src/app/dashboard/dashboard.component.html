@@ -2,6 +2,67 @@
 <body> 
   <!-- Creating new container -->
    <div class="container">
+      <!-- ----------------CREATING SIDEBAR---------------- -->
+      <aside>
+        <!-- Create the MotionMind Logo -->
+        <div class="top">
+
+            <div class="logo">
+            <h2><span class="dark">Motion</span><span class="bold">Mind</span></h2>
+
+            </div>
+            <!-- Create another  division for the close button -->
+            <div class="close" id="close-btn">
+            <span class="material-symbols-outlined">close</span>
+            </div>
+        </div>
+
+        <!-- Creating the sidebar items -->
+        <div class="sidebar">
+
+            <!-- Dashboard -->
+            <a routerLink="/dashboard" routerLinkActive="active">
+            <span class="material-symbols-outlined">grid_view</span>
+            <h3>Dashboard</h3>
+            </a>
+
+            <!-- Profile -->
+            <a routerLink="/user-profile" routerLinkActive="active">
+            <span class="material-symbols-outlined">person</span>
+            <h3>Profile</h3>
+            </a>
+
+            <!-- Progress -->
+            <a routerLink="/user-progress" routerLinkActive="active">
+            <span class="material-symbols-outlined">timeline</span>
+            <h3>Progress</h3>
+            </a>
+
+            <!-- Goals -->
+            <a class="user-goals" routerLinkActive="active">
+            <span class="material-symbols-outlined">target</span>
+            <h3>Goals</h3>
+            </a>
+
+            <!-- Reviews -->
+            <a routerLink="/user-reviews" routerLinkActive="active">
+            <span class="material-symbols-outlined">edit_note</span>
+            <h3>Reviews</h3>
+            </a>
+
+            <!-- Photos -->
+            <a routerLink="/user-photos" routerLinkActive="active">
+            <span class="material-symbols-outlined">photo_camera</span>
+            <h3>Photos</h3>
+            </a>
+
+            <!-- Logout -->
+            <a href="#">
+            <span class="material-symbols-outlined">logout</span>
+            <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
     <!-- ----------------CREATING MAIN---------------- -->
     <main>
       <h1><span class="dark">Dashboard</span></h1>
@@ -45,19 +106,6 @@
           <span class="material-symbols-outlined">target</span>
           <h3>Target Goal: </h3>
         </div>
-          
-
-        <!-- PROGRESS RING 
-        <div class="ring">
-          <svg>
-            <circle cx='38' cy='38' r='36'></circle>
-          </svg>             
-          <div class="remaining">
-              <h3>457</h3>
-              <p>Remaining</p>
-          </div>
-        </div>
-        -->
       </div>
 
       <!-- Display Current Exercise and Nutrition Log -->
@@ -133,9 +181,6 @@
           </div>
         </div>
       </div>
-
-
-
     </div>
   </div>
 </body>

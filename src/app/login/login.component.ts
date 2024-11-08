@@ -16,7 +16,7 @@ export class LoginComponent {
 
     if (username === 'testuser' && password === 'password') {
       alert('Login successful!');
-      this.router.navigate(['/main']); // Navigate to the main page
+      this.router.navigate(['/dashboard']); // Navigate to the main page
     } else {
       alert('Invalid username or password. Please try again.');
     }
