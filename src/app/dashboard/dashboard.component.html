@@ -162,10 +162,24 @@
         <h2><span class="dark">My Goals</span></h2>
         <div class="goal-info">
           <p>You have no new goals.</p>
-          <div class="add-goal">
+          <div class="add-goal" (click)="showPopup = true">
             <h3>Add Goal</h3>
             <span class="material-symbols-outlined">add</span>
           </div>
+        </div>
+      </div>
+
+      <!-- Add New Goal Pop-up -->
+      <div class="popup" *ngIf="showPopup">
+        <div class="popup-content">
+          <h3>Add New Goal</h3>
+          <form (submit)="addGoal()">
+            <label for="goalName">Goal Name:</label>
+            <input id="goalName" type="text" [(ngModel)]="newGoal" name="goalName" required>
+            <br>
+            <button type="submit">Save</button>
+            <button type="button" (click)="showPopup = false">Cancel</button>
+          </form>
         </div>
       </div>
 
