@@ -160,33 +160,53 @@
       <div class="user-goals">
         <br>
         <h2><span class="dark">My Goals</span></h2>
+        <!-- User Goals Information Card -->
         <div class="goal-info">
           <p>You have no new goals.</p>
-          <button onClick=showGoalDialog>
-            <div class="add-goal">
+          <!-- Add New Goal Button: will open a dialog form -->
+          <button id="open-goal-dialog">Add Goal</button>
+          <!-- User Goals: Add Goal Dialog Form -->
+          <dialog class="modal" id="add-goal-dialog">
+            <form method="dialog">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <button  type="submit" id="close-goal-dialog">Add</button>
+            </form>
+          </dialog>
+
+           <!-- <div class="add-goal">
               <h3>Add Goal</h3>
               <span class="material-symbols-outlined">add</span>
-            </div>
-          </button>
+            </div>-->
         </div>
       </div>
 
-      <!-- User Goals: Add Goal Dialog Popup -->
-      <dialog id="add-goal-dialog">
-        <form method="dialog">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <button type="submit">Add</button>
-        </form>
-      </dialog>
-
       <script>
-        const dialog = document.getElementId("add-goal-dialog")
-        function showGoalDialog(){
-          dialog.showModal()
+        // Open and Close buttons for 'Add Goal' Form
+        const openForm = document.getElementById('open-goal-dialog');
+        const closeForm = document.getElementById('close-goal-dialog');
+        // Add Goal Form
+        const goalDialog = document.getElementById('add-goal-dialog');
+        
+        if (openForm && goalDialog){        
+          /* Add new goal: Open form on click */
+          openForm.addEventListener('click', () =>{
+            goalDialog.showModal();
+          });
         }
+
+        if (closeForm && goalDialog){        
+          /* Add new goal: Close form on click */
+          closeForm.addEventListener('click', () =>{
+            goalDialog.close();
+          });
+        }
+
+        /*function showGoalDialog(){
+          goalDialog.showModal()
+          */
       </script>
 
       <!-- Add New Goal Pop-up
@@ -216,17 +236,6 @@
         </div>
       </div>
 -->
-      <!-- User Goals: Add Goal Dialog Popup -->
-      <dialog id="add-goal-dialog">
-        <form method="dialog">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <button type="submit">Add</button>
-        </form>
-      </dialog>
-
     </div>
   </div>
 </body>
