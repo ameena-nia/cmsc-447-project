@@ -162,14 +162,34 @@
         <h2><span class="dark">My Goals</span></h2>
         <div class="goal-info">
           <p>You have no new goals.</p>
-          <div class="add-goal" (click)="showPopup = true">
-            <h3>Add Goal</h3>
-            <span class="material-symbols-outlined">add</span>
-          </div>
+          <button onClick=showGoalDialog>
+            <div class="add-goal">
+              <h3>Add Goal</h3>
+              <span class="material-symbols-outlined">add</span>
+            </div>
+          </button>
         </div>
       </div>
 
-      <!-- Add New Goal Pop-up -->
+      <!-- User Goals: Add Goal Dialog Popup -->
+      <dialog id="add-goal-dialog">
+        <form method="dialog">
+          <input type="text">
+          <input type="text">
+          <input type="text">
+          <input type="text">
+          <button type="submit">Add</button>
+        </form>
+      </dialog>
+
+      <script>
+        const dialog = document.getElementId("add-goal-dialog")
+        function showGoalDialog(){
+          dialog.showModal()
+        }
+      </script>
+
+      <!-- Add New Goal Pop-up
       <div class="popup" *ngIf="showPopup">
         <div class="popup-content">
           <h3>Add New Goal</h3>
@@ -182,8 +202,8 @@
           </form>
         </div>
       </div>
-
-      <!-- User Reviews Section -->
+    -->
+      <!-- User Reviews Section 
       <div class="user-reviews">
         <br>
         <h2><span class="dark">My Reviews</span></h2>
@@ -195,6 +215,18 @@
           </div>
         </div>
       </div>
+-->
+      <!-- User Goals: Add Goal Dialog Popup -->
+      <dialog id="add-goal-dialog">
+        <form method="dialog">
+          <input type="text">
+          <input type="text">
+          <input type="text">
+          <input type="text">
+          <button type="submit">Add</button>
+        </form>
+      </dialog>
+
     </div>
   </div>
 </body>

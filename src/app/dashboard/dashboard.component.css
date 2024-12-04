@@ -327,9 +327,7 @@ main .nutrition > div.food{
     justify-content: center;
 }
 
-/* -------------------POP-UPS------------------- */
-/* Add a new goal pop-up style*/
-/* Pop-up styling */
+/* -------------------POP-UPS------------------- 
 .popup {
     position: fixed;
     top: 0;
@@ -354,4 +352,4 @@ main .nutrition > div.food{
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
+  }*/
