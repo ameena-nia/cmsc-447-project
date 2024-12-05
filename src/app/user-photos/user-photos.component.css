@@ -1,0 +1,32 @@
+/* Ensure that the body and html take up the full height of the viewport */
+html, body {
+    height: 100%;   /* Full height of the viewport */
+    margin: 0;      /* Remove default margin */
+    padding: 0;     /* Remove default padding */
+  }
+  
+  /* Make sure the photo upload container fills the entire viewport */
+  .photo-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full height of the viewport */
+    width: 100vw;   /* Full width of the viewport */
+    margin: 0;      /* Remove any default margin */
+    padding: 0;     /* Remove any default padding */
+    overflow: hidden; /* Prevent any overflow */
+    background-color: #f0f0f0; /* Optional: Set a light background */
+  }
+  
+  /* Ensure the uploaded image takes up the full viewport */
+  .uploaded-image {
+    position: absolute;  /* Position the image absolutely */
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Take up full width of the viewport */
+    height: 100vh; /* Take up full height of the viewport */
+    object-fit: cover;  /* Make sure the image covers the area */
+    object-position: center;  /* Center the image */
+    z-index: -1;  /* Ensure it’s in the background */
+  }
+  
