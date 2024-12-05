@@ -15,7 +15,7 @@ html, body {
     margin: 0;      /* Remove any default margin */
     padding: 0;     /* Remove any default padding */
     overflow: hidden; /* Prevent any overflow */
-    background-color: #f0f0f0; /* Optional: Set a light background */
+    background-color: #d0ede6; /* Optional: Set a light background */
   }
   
   /* Ensure the uploaded image takes up the full viewport */

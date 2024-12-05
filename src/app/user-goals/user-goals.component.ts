@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';  // Import FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-goals',
@@ -18,7 +18,10 @@ export class UserGoalsComponent {
   addGoal(): void {
     if (this.goalInput.trim()) {
       this.inProgressGoals.push(this.goalInput.trim());  // Add goal to 'In Progress' list
+      console.log('Goal added:', this.goalInput);  // Debugging log
       this.goalInput = '';  // Reset input field after adding
+    } else {
+      console.log('Please enter a goal.');  // Debugging log
     }
   }
 
