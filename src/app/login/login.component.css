@@ -1,55 +1,87 @@
+/* Body and HTML to ensure full height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center; /* Vertically center */
+  background-color: #95dbd3; /* Background color */
+}
+
+/* Centering the container and shifting towards the right */
 .login-page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #d0ede6;; 
-  }
-  
-  .login-box {
-    background-color: #82b8ac; 
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px; 
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .form-group {
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  input {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #2c584e;
-    border-radius: 5px;
-  }
-  
-  .login-button {
-    background-color: #f06b6b; /* Match with your theme */
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1rem;
-  }
-  
-  .login-button:hover {
-    background-color: #e05a5a; /* Darker shade for hover */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between logo and login box */
+  width: 200%;  /* Full width */
+  height: 100%; /* Full height */
+  margin-left: 220%;  /* Shift everything 20% from the left */
+}
+
+/* Style the logo */
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* Style the login box */
+.login-box {
+  background-color: #82b8ac; /* Background for the login box */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Full width but with a max-width */
+  max-width: 400px; /* Limit the width to 400px for smaller screens */
+  box-sizing: border-box; /* Includes padding in width calculation */
+  text-align: center; /* Center the text inside the box */
+}
+
+/* Style the form header */
+.login-box h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+/* Style the form groups */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #2c584e;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Style the login button */
+.login-button {
+  background-color: #f06b6b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.login-button:hover {
+  background-color: #e05a5a;
+}

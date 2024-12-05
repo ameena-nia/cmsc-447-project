@@ -3,10 +3,17 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserGoalsComponent } from './user-goals/user-goals.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserReviewsComponent } from './user-reviews/user-reviews.component';
+import { UserPhotosComponent } from './user-photos/user-photos.component';
+import { UserProgressComponent } from './user-progress/user-progress.component';
 
 export const routes: Routes = [
-  { path: '', component: LoginComponent }, // Login page route
-  //{ path: 'main', component: MainComponent }, // Main landing page route
-  { path: 'dashboard', component: DashboardComponent }, // Main landing page route
-  { path: 'user-goals', component: UserGoalsComponent } // Goals page route
+  { path: '', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'user-goals', component: UserGoalsComponent },
+  { path: 'user-profile', component: UserProfileComponent },
+  { path: 'user-progress', component: UserProgressComponent },
+  { path: 'user-reviews', component: UserReviewsComponent },
+  { path: 'user-photos', component: UserPhotosComponent }
 ];
