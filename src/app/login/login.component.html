@@ -1,28 +1,22 @@
-    <!-- Create the MotionMind Logo -->
-    <div class="top">
-        <div class="logo">
-          <!-- Logo is located in the sidebar.
-           'Danger' is a CSS class that will contain
-           the color we want for the word 'Motion'-->
-          <h2><span class="dark">Motion</span><span class="bold">Mind</span></h2>
-        </div>
-        <!-- Create another division for the close button -->
-      </div>
-
 <div class="login-page-container">
-    <div class="login-box">
-      <h1>Welcome to MotionMind!</h1>
-      <form (submit)="onLogin(); $event.preventDefault()">
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit" class="login-button">Login</button>
-      </form>      
-    </div>
+  <!-- Logo Section -->
+  <div class="logo">
+    <h1><span class="dark">Motion</span><span class="bold">Mind</span></h1>
   </div>
-  
+
+  <!-- Login Box -->
+  <div class="login-box">
+    <h1>Welcome to MotionMind!</h1>
+    <form (submit)="onLogin(); $event.preventDefault()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+</div>
