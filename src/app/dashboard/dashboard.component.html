@@ -162,53 +162,63 @@
         <h2><span class="dark">My Goals</span></h2>
         <!-- User Goals Information Card -->
         <div class="goal-info">
-          <p>You have no new goals.</p>
+          <p>You have no new goals.</p>     
           <!-- Add New Goal Button: will open a dialog form -->
-          <button id="open-goal-dialog">Add Goal</button>
-          <!-- User Goals: Add Goal Dialog Form -->
-          <dialog class="modal" id="add-goal-dialog">
-            <form method="dialog">
-              <input type="text">
-              <input type="text">
-              <input type="text">
-              <input type="text">
-              <button  type="submit" id="close-goal-dialog">Add</button>
-            </form>
-          </dialog>
-
+          <button (click)="openDialog()" id="open-goal-dialog">Add Goal</button>
            <!-- <div class="add-goal">
               <h3>Add Goal</h3>
               <span class="material-symbols-outlined">add</span>
             </div>-->
         </div>
+
+        <!-- User Goals: Add Goal Dialog Form -->
+        <dialog *ngIf="isDialogOpen" class="modal" id="add-goal-dialog">
+          <div class="modal-content">
+            <h2><span class="dark">New Goal</span></h2>
+            <br>
+            <form method="dialog">
+              <label for="weight-goal" class="flex-label">I want to 
+                <select id="weight-options" name="weight-action">
+                  <option value="lose">lose</option>
+                  <option value="gain">gain</option>
+                  <option value="maintain">maintain</option>
+                </select>
+                weight.
+              </label>
+              <label>Current Weight: <input type="text" placeholder="ex. 150 lbs"/></label>
+              <label>Target Weight: <input type="text" placeholder="ex. 150 lbs"/></label>
+              <label>Target Calorie Goal: <input type="text" placeholder="ex. 2000 cal"/></label>
+              
+              <!-- Add the new goal to Goals page -->
+              <button  type="button" *ngIf="closeDialog()" id="close-goal-dialog">Add</button> 
+            </form>
+          </div>
+        </dialog>
       </div>
 
+      <!--
       <script>
         // Open and Close buttons for 'Add Goal' Form
         const openForm = document.getElementById('open-goal-dialog');
         const closeForm = document.getElementById('close-goal-dialog');
         // Add Goal Form
         const goalDialog = document.getElementById('add-goal-dialog');
-        
-        if (openForm && goalDialog){        
-          /* Add new goal: Open form on click */
-          openForm.addEventListener('click', () =>{
-            goalDialog.showModal();
-          });
-        }
-
-        if (closeForm && goalDialog){        
-          /* Add new goal: Close form on click */
-          closeForm.addEventListener('click', () =>{
-            goalDialog.close();
-          });
-        }
+         
+        /* Add new goal: Open form on click */
+        openForm.addEventListener('click', () =>{
+          goalDialog.showModal();
+        });
+  
+        /* Add new goal: Close form on click */
+        closeForm.addEventListener('click', () =>{
+          goalDialog.close();
+        });
 
         /*function showGoalDialog(){
           goalDialog.showModal()
           */
       </script>
-
+  -->
       <!-- Add New Goal Pop-up
       <div class="popup" *ngIf="showPopup">
         <div class="popup-content">
@@ -223,7 +233,7 @@
         </div>
       </div>
     -->
-      <!-- User Reviews Section 
+      <!-- User Reviews Section -->
       <div class="user-reviews">
         <br>
         <h2><span class="dark">My Reviews</span></h2>
@@ -235,7 +245,7 @@
           </div>
         </div>
       </div>
--->
+
     </div>
   </div>
 </body>

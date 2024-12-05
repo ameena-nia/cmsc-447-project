@@ -271,6 +271,130 @@ main .nutrition > div.food{
     justify-content: center;
 }
 
+/* ADD GOAL BUTTON STYLING */
+#open-goal-dialog {
+    background: var(--color-shadow);
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: poppins, sans-serif;
+    padding: 25px 43px;
+    border: 2px dashed var(--color-dark);
+    border-radius: var(--card-border-radius);
+    height: 75px;
+    width: 200px;
+    margin-top: 1.8rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+  
+  #open-goal-dialog:hover {
+    background-color: #60a393; /* Darker blue on hover */
+    color: rgb(222, 241, 241);
+    transition: all 300ms ease;
+  }
+  
+  #open-goal-dialog:active {
+    background-color: #2c584e; /* Even darker blue when pressed */
+  }
+
+/* -------------------ADD NEW GOAL DIALOG-------------------*/
+.modal{
+    /*display: none*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(136, 133, 133, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    text-align: left;
+    overflow-y: auto;
+  }
+
+  .modal-content h2{
+    text-align: center;
+  }
+
+  .modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #close-goal-dialog {
+    display: inline-block;
+    align-self: center;
+    padding: 5px 10px; /* Smaller padding for a compact button */
+    width: 100px;
+    font-size: 12px; /* Smaller font size */
+    font-family: poppins, sans-serif;
+    background-color: #eb676f; /* Optional: Blue background */
+    color: white; /* Optional: White text */
+    border: none; /* Optional: Remove border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 100;
+  }
+  
+  #close-goal-dialog:hover {
+    background-color: #c6474f; /* Optional: Darker shade on hover */
+  }
+
+  /* Style the select dropdown */
+#weight-options {
+    padding: 4px; /* Add some padding for spacing */
+    font-size: 14px; /* Adjust font size */
+    border: 2px solid #ccc; /* Add a blue border */
+    border-radius: 5px; /* Round the corners */
+    background-color: white; /* Set background color */
+    color: black; /* Text color */
+    cursor: pointer; /* Pointer cursor for better UX */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+  }
+  
+  /* Change border color on focus */
+  #weight-options:focus {
+    border-color: #eb676f; /* Darker blue when focused */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Optional: Style the dropdown arrow */
+  #weight-options::-ms-expand {
+    display: none; /* Hide the default dropdown arrow on IE/Edge */
+  }
+
+  /* Style for the input fields in the dialog */
+dialog input[type="text"] {
+    padding: 4px; /* Add space inside the input */
+    font-size: 16px; /* Adjust font size */
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: white; /* Background color */
+    color: #333; /* Text color */
+    width: 50%; /* Full width input for consistent styling */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transition: border-color 0.3s ease; /* Smooth border color change on focus */
+  }
+  
+  /* Focus state for inputs */
+  dialog input[type="text"]:focus {
+    border-color: #eb676f; /* Change border color to blue when focused */
+    outline: none; /* Remove default focus outline */
+  }
+
+
 /* -------------------USER REVIEW SECTIONS-------------------- */
 
 .right .user-reviews{
