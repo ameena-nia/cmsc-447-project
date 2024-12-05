@@ -1,4 +1,4 @@
-<!-- Creating new container -->
+Creating new container
 <div class="container">
   <!-- ----------------CREATING SIDEBAR---------------- -->
   <aside>
@@ -16,50 +16,51 @@
       </div>
     </div>
 
-    <!-- Creating the sidebar items -->
-    <div class="sidebar">
-      <!-- Dashboard -->
-      <a href="#">
-        <span class="material-symbols-outlined">grid_view</span>
-        <h3>Dashboard</h3>
-      </a>
+  <!-- Creating the sidebar items -->
+  <div class="sidebar">
+    <!-- Dashboard -->
+    <a routerLink="/dashboard" routerLinkActive="active">
+      <span class="material-symbols-outlined">grid_view</span>
+      <h3>Dashboard</h3>
+    </a>
 
-      <!-- Profile -->
-      <a href="#">
-        <span class="material-symbols-outlined">person</span>
-        <h3>Profile</h3>
-      </a>
+    <!-- Profile -->
+    <a routerLink="/user-profile" routerLinkActive="active">
+      <span class="material-symbols-outlined">person</span>
+      <h3>Profile</h3>
+    </a>
 
-      <!-- Progress -->
-      <a href="#">
-        <span class="material-symbols-outlined">timeline</span>
-        <h3>Progress</h3>
-      </a>
+    <!-- Progress -->
+    <a routerLink="/user-progress" routerLinkActive="active">
+      <span class="material-symbols-outlined">timeline</span>
+      <h3>Progress</h3>
+    </a>
 
-      <!-- Goals -->
-      <a href="#">
-        <span class="material-symbols-outlined">target</span>
-        <h3>Goals</h3>
-      </a>
+    <!-- Goals -->
+    <a routerLink="/user-goals" routerLinkActive="active">
+      <span class="material-symbols-outlined">target</span>
+      <h3>Goals</h3>
+    </a>
 
-      <!-- Reviews -->
-      <a href="#">
-        <span class="material-symbols-outlined">edit_note</span>
-        <h3>Reviews</h3>
-      </a>
+    <!-- Reviews -->
+    <a routerLink="/user-reviews" routerLinkActive="active">
+      <span class="material-symbols-outlined">edit_note</span>
+      <h3>Reviews</h3>
+    </a>
 
-      <!-- Photos -->
-      <a href="#">
-        <span class="material-symbols-outlined">photo_camera</span>
-        <h3>Photos</h3>
-      </a>
+    <!-- Photos -->
+    <a routerLink="/user-photos" routerLinkActive="active">
+      <span class="material-symbols-outlined">photo_camera</span>
+      <h3>Photos</h3>
+    </a>
 
-      <!-- Logout -->
-      <a (click)="onLogout()"> 
-        <span class="material-symbols-outlined">logout</span>
-        <h3>Logout</h3>
-      </a>
-    </div>
+    <!-- Logout -->
+    <a (click)="onLogout()"> 
+      <span class="material-symbols-outlined">logout</span>
+      <h3>Logout</h3>
+    </a>
+  </div>
+
   </aside>
 
   <!-- ----------------CREATING MAIN---------------- -->
