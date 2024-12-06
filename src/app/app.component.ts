@@ -21,5 +21,11 @@ export class AppComponent {
     const noSidebarRoutes = ['/', '/login', '/register']; // Routes where the sidebar should be hidden
     return !noSidebarRoutes.includes(this.router.url);
   }
+  logout():void{
+    alert('You have logged out successfully');
+    
+    // Redirect to the login page
+    this.router.navigate(['/']);  
+  }
 }
 

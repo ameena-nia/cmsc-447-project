@@ -1,1 +1,13 @@
-<p>user-photos works!</p>
+<div class="user-profile-container">
+    <div class="profile-details">
+      <!-- Add title for Upload Progress Pictures -->
+      <h2 class="upload-title">Upload Progress Pictures</h2> <!-- New Title -->
+  
+      <!-- Display Profile Picture -->
+      <div class="profile-pic">
+        <img [src]="profile.picture || defaultProfilePic" alt="Profile Picture">
+        <input type="file" (change)="onFileChange($event)" accept="image/*">
+      </div>
+    </div>
+  </div>
+  

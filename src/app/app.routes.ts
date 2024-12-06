@@ -7,6 +7,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserReviewsComponent } from './user-reviews/user-reviews.component';
 import { UserPhotosComponent } from './user-photos/user-photos.component';
 import { UserProgressComponent } from './user-progress/user-progress.component';
+import { LogoutComponent } from './logout/logout.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -22,5 +23,7 @@ export const routes: Routes = [
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'user-progress', component: UserProgressComponent },
   { path: 'user-reviews', component: UserReviewsComponent },
-  { path: 'user-photos', component: UserPhotosComponent }
+  { path: 'user-photos', component: UserPhotosComponent },
+  { path: 'logout', component: LogoutComponent },
+
 ];

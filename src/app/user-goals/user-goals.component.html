@@ -1,1 +1,42 @@
-<p>user-goals works!</p>
+<div class="goal-container">
+    <!-- Goal Input and Add Button -->
+    <div class="goal-input">
+      <input [(ngModel)]="goalInput" placeholder="Enter your goal" />
+      <button (click)="addGoal()">Add Goal</button>
+    </div>
+  
+    <!-- Tab Navigation for In Progress and Completed -->
+    <div class="tabs">
+      <button
+        [class.selected]="selectedTab === 'in-progress'"
+        (click)="selectTab('in-progress')">In Progress</button>
+      <button
+        [class.selected]="selectedTab === 'completed'"
+        (click)="selectTab('completed')">Completed</button>
+    </div>
+  
+    <!-- In Progress Section (Visible only when selectedTab is 'in-progress') -->
+    <div *ngIf="selectedTab === 'in-progress'" class="goals-section">
+      <h2>In Progress</h2>
+      <ul>
+        <li *ngFor="let goal of inProgressGoals; let i = index">
+          {{ goal }}
+          <button (click)="markAsCompleted(i)">Mark as Completed</button>
+          <button (click)="deleteGoal(inProgressGoals, i)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Completed Section (Visible only when selectedTab is 'completed') -->
+    <div *ngIf="selectedTab === 'completed'" class="goals-section">
+      <h2>Completed</h2>
+      <ul>
+        <li *ngFor="let goal of completedGoals; let i = index">
+          {{ goal }}
+          <button (click)="markAsInProgress(i)">Mark as In Progress</button>
+          <button (click)="deleteGoal(completedGoals, i)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
