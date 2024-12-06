@@ -10,7 +10,14 @@ import { UserProgressComponent } from './user-progress/user-progress.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, 
+    /*
+    children: [
+      { path: '', component: DashboardMainComponent, outlet: 'main' },
+      { path: '', component: DashboardRightComponent, outlet: 'right' },
+    ],
+    */
+  },
   { path: 'user-goals', component: UserGoalsComponent },
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'user-progress', component: UserProgressComponent },

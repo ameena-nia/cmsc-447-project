@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  
   isDialogOpen: boolean = false; // Dialog Visibility
 
   // Function to open the dialog
@@ -20,4 +21,5 @@ export class DashboardComponent {
   closeDialog(): void{
     this.isDialogOpen = false;
   }
+  
 }

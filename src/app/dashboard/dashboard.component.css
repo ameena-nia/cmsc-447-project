@@ -1,23 +1,6 @@
-
 /* ----------------MAIN SECTION---------------- */
 main{
     margin-top: 1.4rem;
-}
-
-main .date{
-    display: inline-block;
-    background: var(--color-box);
-    border-radius: var(--border-radius-1);
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 1.6rem;
-    padding-left: 1.6rem; 
-}
-
-main .date input[type="date"]{
-    background: transparent;
-    color: var(--color-dark);
 }
 
 main .calories{
@@ -450,30 +433,3 @@ dialog input[type="text"] {
     display: flex;
     justify-content: center;
 }
-
-/* -------------------POP-UPS------------------- 
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .popup-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }*/

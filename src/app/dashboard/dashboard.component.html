@@ -1,185 +1,181 @@
+<main>
+<h1><span class="dark">Dashboard</span></h1>
+<br>
+<h2><span class="dark">Today's Progress</span></h2>
+<!-- Display the current date 
+<div class="date">
+  <input type="date">
+</div>
+-->
 
-    <!-- ----------------CREATING MAIN---------------- -->
-    <main>
-      <h1><span class="dark">Dashboard</span></h1>
-      <br>
-      <h2><span class="dark">Today's Progress</span></h2>
-      <!-- Display the current date 
-      <div class="date">
-        <input type="date">
-      </div>
-      -->
+<!-- Display Current Day's Progress -->
+<div class="calories">
+  <h2>Calories</h2>
+  <br>
 
-      <!-- Display Current Day's Progress -->
-      <div class="calories">
-        <h2>Calories</h2>
-        <br>
-
-        <!-- Middle section of the progress card.
-         This section contains the following calorie info:
-         1. Calories burned
-         2. Calories consumed
-         3. Target goal 
-         4. Progress ring
-         -->
-
-        <!-- CALORIES BURNED -->         
-        <div class="cal-burned">
-          <span class="material-symbols-outlined">local_fire_department</span>
-          <h3>Burned: </h3>
-        </div>
-        <br>
-        <!-- CALORIES CONSUMED -->
-
-        <div class="cal-intake">
-          <span class="material-symbols-outlined">restaurant</span>
-          <h3>Intake: </h3>
-        </div>
-        <br>
-
-        <!-- USER TARGET GOAL -->
-        <div class="cal-goal">
-          <span class="material-symbols-outlined">target</span>
-          <h3>Target Goal: </h3>
-        </div>
-      </div>
-
-      <!-- Display Current Exercise and Nutrition Log -->
-      <div class = "daily-logs">
-        <!-- Display Current Exercise Log -->
-        <div class="exercise">
-          <h2>Exercise</h2>
-          <div class="burned">
-            <span class="material-symbols-outlined">local_fire_department</span>
-            <h3>Burned: </h3>
-          </div>
-          <div class="burn-time">
-            <span class="material-symbols-outlined">timer</span>
-            <h3>Time: </h3>
-          </div>
-        </div>
-        <!-- Display Current Nutrition Log -->
-        <div class="nutrition">
-          <h2>Food</h2>
-          <div class="food">
-            <span class="material-symbols-outlined">restaurant</span>
-            <h3>Intake: </h3>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!------------------------------- END OF MAIN ------------------------------->
-    <!-------------------------- RIGHT SECTION ---------------------------->
-    <div class="right">
-      <!-- TOP SECTION OF DASHBOARD -->
-      <div class="top">
-        <button id="menu-btn">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-
-        <!-- Welcome user message and user profile account. -->
-        <div class="profile">
-            <div class="profile-info">
-              <p>Welcome, <b>User</b>!</p>
-              <small>Admin</small>
-            </div>
-            <div class="profile-photo">
-              <span class="material-symbols-outlined">account_circle</span>
-            </div>
-        </div>
-      </div>
-      <!-- --------------------------END OF TOP-------------------------- -->
-      <br>
-      
-      <!-- User Goals Section -->
-      <div class="user-goals">
-        <br>
-        <h2><span class="dark">My Goals</span></h2>
-        <!-- User Goals Information Card -->
-        <div class="goal-info">
-          <p>You have no new goals.</p>     
-          <!-- Add New Goal Button: will open a dialog form -->
-          <button (click)="openDialog()" id="open-goal-dialog">Add Goal</button>
-           <!-- <div class="add-goal">
-              <h3>Add Goal</h3>
-              <span class="material-symbols-outlined">add</span>
-            </div>-->
-        </div>
-
-        <!-- User Goals: Add Goal Dialog Form -->
-        <dialog *ngIf="isDialogOpen" class="modal" id="add-goal-dialog">
-          <div class="modal-content">
-            <h2><span class="dark">New Goal</span></h2>
-            <br>
-            <form method="dialog">
-              <label for="weight-goal" class="flex-label">I want to 
-                <select id="weight-options" name="weight-action">
-                  <option value="lose">lose</option>
-                  <option value="gain">gain</option>
-                  <option value="maintain">maintain</option>
-                </select>
-                weight.
-              </label>
-              <label>Current Weight: <input type="text" placeholder="ex. 150 lbs"/></label>
-              <label>Target Weight: <input type="text" placeholder="ex. 150 lbs"/></label>
-              <label>Target Calorie Goal: <input type="text" placeholder="ex. 2000 cal"/></label>
-              
-              <!-- Add the new goal to Goals page -->
-              <button  type="button" *ngIf="closeDialog()" id="close-goal-dialog">Add</button> 
-            </form>
-          </div>
-        </dialog>
-      </div>
-
-      <!--
-      <script>
-        // Open and Close buttons for 'Add Goal' Form
-        const openForm = document.getElementById('open-goal-dialog');
-        const closeForm = document.getElementById('close-goal-dialog');
-        // Add Goal Form
-        const goalDialog = document.getElementById('add-goal-dialog');
-         
-        /* Add new goal: Open form on click */
-        openForm.addEventListener('click', () =>{
-          goalDialog.showModal();
-        });
-  
-        /* Add new goal: Close form on click */
-        closeForm.addEventListener('click', () =>{
-          goalDialog.close();
-        });
-
-        /*function showGoalDialog(){
-          goalDialog.showModal()
-          */
-      </script>
+  <!-- Middle section of the progress card.
+  This section contains the following calorie info:
+  1. Calories burned
+  2. Calories consumed
+  3. Target goal 
+  4. Progress ring
   -->
-      <!-- Add New Goal Pop-up
-      <div class="popup" *ngIf="showPopup">
-        <div class="popup-content">
-          <h3>Add New Goal</h3>
-          <form (submit)="addGoal()">
-            <label for="goalName">Goal Name:</label>
-            <input id="goalName" type="text" [(ngModel)]="newGoal" name="goalName" required>
-            <br>
-            <button type="submit">Save</button>
-            <button type="button" (click)="showPopup = false">Cancel</button>
-          </form>
-        </div>
-      </div>
-    -->
-      <!-- User Reviews Section -->
-      <div class="user-reviews">
-        <br>
-        <h2><span class="dark">My Reviews</span></h2>
-        <div class="review-info">
-          <p>You have no new reviews.</p>
-          <div class="add-review">
-            <h3>Add Review</h3>
-            <span class="material-symbols-outlined">add</span>
-          </div>
-        </div>
-      </div>
 
+  <!-- CALORIES BURNED -->         
+  <div class="cal-burned">
+    <span class="material-symbols-outlined">local_fire_department</span>
+    <h3>Burned: </h3>
+  </div>
+  <br>
+  <!-- CALORIES CONSUMED -->
+
+  <div class="cal-intake">
+    <span class="material-symbols-outlined">restaurant</span>
+    <h3>Intake: </h3>
+  </div>
+  <br>
+
+  <!-- USER TARGET GOAL -->
+  <div class="cal-goal">
+    <span class="material-symbols-outlined">target</span>
+    <h3>Target Goal: </h3>
+  </div>
+</div>
+
+<!-- Display Current Exercise and Nutrition Log -->
+<div class = "daily-logs">
+  <!-- Display Current Exercise Log -->
+  <div class="exercise">
+    <h2>Exercise</h2>
+    <div class="burned">
+      <span class="material-symbols-outlined">local_fire_department</span>
+      <h3>Burned: </h3>
     </div>
+    <div class="burn-time">
+      <span class="material-symbols-outlined">timer</span>
+      <h3>Time: </h3>
+    </div>
+  </div>
+  <!-- Display Current Nutrition Log -->
+  <div class="nutrition">
+    <h2>Food</h2>
+    <div class="food">
+      <span class="material-symbols-outlined">restaurant</span>
+      <h3>Intake: </h3>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-------------------------- RIGHT SECTION ---------------------------->
+<div class="right">
+<!-- TOP SECTION OF DASHBOARD -->
+<div class="top">
+    <button id="menu-btn">
+    <span class="material-symbols-outlined">menu</span>
+    </button>
+
+    <!-- Welcome user message and user profile account. -->
+    <div class="profile">
+        <div class="profile-info">
+        <p>Welcome, <b>User</b>!</p>
+        <small>Admin</small>
+        </div>
+        <div class="profile-photo">
+        <span class="material-symbols-outlined">account_circle</span>
+        </div>
+    </div>
+</div>
+<!-- --------------------------END OF TOP-------------------------- -->
+<br>
+
+<!-- User Goals Section -->
+<div class="user-goals">
+    <br>
+    <h2><span class="dark">My Goals</span></h2>
+    <!-- User Goals Information Card -->
+    <div class="goal-info">
+    <p>You have no new goals.</p>     
+    <!-- Add New Goal Button: will open a dialog form -->
+    <button (click)="openDialog()" id="open-goal-dialog">Add Goal</button>
+        <!-- <div class="add-goal">
+        <h3>Add Goal</h3>
+        <span class="material-symbols-outlined">add</span>
+        </div>-->
+    </div>
+
+    <!-- User Goals: Add Goal Dialog Form -->
+    <dialog *ngIf="isDialogOpen" class="modal" id="add-goal-dialog">
+    <div class="modal-content">
+        <h2><span class="dark">New Goal</span></h2>
+        <br>
+        <form method="dialog">
+        <label for="weight-goal" class="flex-label">I want to 
+            <select id="weight-options" name="weight-action">
+            <option value="lose">lose</option>
+            <option value="gain">gain</option>
+            <option value="maintain">maintain</option>
+            </select>
+            weight.
+        </label>
+        <label>Current Weight: <input type="text" placeholder="ex. 150 lbs"/></label>
+        <label>Target Weight: <input type="text" placeholder="ex. 150 lbs"/></label>
+        <label>Target Calorie Goal: <input type="text" placeholder="ex. 2000 cal"/></label>
+        
+        <!-- Add the new goal to Goals page -->
+        <button  type="button" *ngIf="closeDialog()" id="close-goal-dialog">Add</button> 
+        </form>
+    </div>
+    </dialog>
+</div>
+
+<!--
+<script>
+    // Open and Close buttons for 'Add Goal' Form
+    const openForm = document.getElementById('open-goal-dialog');
+    const closeForm = document.getElementById('close-goal-dialog');
+    // Add Goal Form
+    const goalDialog = document.getElementById('add-goal-dialog');
+    
+    /* Add new goal: Open form on click */
+    openForm.addEventListener('click', () =>{
+    goalDialog.showModal();
+    });
+
+    /* Add new goal: Close form on click */
+    closeForm.addEventListener('click', () =>{
+    goalDialog.close();
+    });
+
+    /*function showGoalDialog(){
+    goalDialog.showModal()
+    */
+</script>
+-->
+<!-- Add New Goal Pop-up
+<div class="popup" *ngIf="showPopup">
+    <div class="popup-content">
+    <h3>Add New Goal</h3>
+    <form (submit)="addGoal()">
+        <label for="goalName">Goal Name:</label>
+        <input id="goalName" type="text" [(ngModel)]="newGoal" name="goalName" required>
+        <br>
+        <button type="submit">Save</button>
+        <button type="button" (click)="showPopup = false">Cancel</button>
+    </form>
+    </div>
+</div>
+-->
+<!-- User Reviews Section -->
+<div class="user-reviews">
+    <br>
+    <h2><span class="dark">My Reviews</span></h2>
+    <div class="review-info">
+    <p>You have no new reviews.</p>
+    <div class="add-review">
+        <h3>Add Review</h3>
+        <span class="material-symbols-outlined">add</span>
+    </div>
+    </div>
+</div>
+</div>
